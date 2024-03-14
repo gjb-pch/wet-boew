@@ -77,7 +77,7 @@ const componentName = "wb-tagfilter",
 				}
 			} );
 
-			// Handle clear all link
+			// Handle clear all link, shold we add an exmaple to show the clear all works on multiple radio block
 			if ( $( elm ).find( "." + clearAllClass ).length > 0 ) {
 				$( elm ).find( "." + clearAllClass ).on( "click", function( event ) {
 					event.preventDefault();
