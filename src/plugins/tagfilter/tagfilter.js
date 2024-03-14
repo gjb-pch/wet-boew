@@ -18,6 +18,7 @@ const componentName = "wb-tagfilter",
 	tgFilterOutClass = "wb-tgfltr-out",
 	itemsWrapperClass = "wb-tagfilter-items",
 	noResultWrapperClass = "wb-tagfilter-noresult",
+	clearAllClass = "wb-tagfilter-clear",
 
 	init = function( event ) {
 		const elm = wb.init( event, componentName, selector );
@@ -31,6 +32,7 @@ const componentName = "wb-tagfilter",
 			elm.items = [];
 			elm.filters = {};
 			elm.activeFilters = [];
+			elm.defaultRadioVal = [];
 
 			if ( taggedItemsWrapper ) {
 				taggedItemsWrapper.id = taggedItemsWrapper.id || wb.getId(); // Ensure the element has an ID
@@ -57,8 +59,41 @@ const componentName = "wb-tagfilter",
 			}
 
 			// Update list of visible items (in case of predefined filters)
-			update( elm );
+			$( document ).on( "wb-ready.wb", function() {
+				if ( filterControls.length ) {
+					elm.filters = buildFiltersObj( filterControls );
 
+					filterControls.forEach( function( item ) {
+						item.setAttribute( "aria-controls", taggedItemsWrapper.id );
+					} );
+				}
+				update( elm );
+			} );
+
+			// Save the default setting of radio button
+			filterControls.forEach( function( control ) {
+				if ( control.type === "radio" && control.checked ) {
+					elm.defaultRadioVal.push( control );
+				}
+			} );
+
+			// Handle clear all link
+			if ( $( elm ).find( "." + clearAllClass ).length > 0 ) {
+				$( elm ).find( "." + clearAllClass ).on( "click", function( event ) {
+					event.preventDefault();
+					$( elm ).find( "input:checkbox" + selectorCtrl ).removeAttr( "checked" );
+					$( elm ).find( ":radio" + selectorCtrl ).removeAttr( "checked" );
+					$( elm ).find( "select" + selectorCtrl ).val( "" );
+					$( elm ).find( "input[type='date']" + selectorCtrl ).val( "" );
+					$( elm ).find( selectorCtrl ).each( function() {
+						let element = $( this );
+						element.trigger( "change" );
+					} );
+					elm.defaultRadioVal.forEach( function( item ) {
+						$( item ).attr( "checked", true ).trigger( "click" );
+					} );
+				} );
+			}
 			wb.ready( $( elm ), componentName );
 		}
 	},
@@ -109,6 +144,7 @@ const componentName = "wb-tagfilter",
 
 				break;
 			case "select-one":
+			case "date":
 				filtersObj[ control.name ] = [ {
 					type: control.type,
 					value: control.value
@@ -158,6 +194,7 @@ const componentName = "wb-tagfilter",
 				break;
 
 			case "select-one":
+			case "date":
 				if ( filterGroup[ 0 ].value !== "" ) {
 					filterGroupActiveFilters.push( filterGroup[ 0 ].value );
 				}
@@ -254,6 +291,7 @@ $document.on( "change", selectorCtrl, function( event )  {
 		break;
 
 	case "select-one":
+	case "date":
 
 		// Update virtual filter to the new value
 		filterGroup[ 0 ].value = filterValue;
@@ -269,7 +307,7 @@ $document.on( "wb-contentupdated", selector, function( event, data )  {
 		supportsHas = window.getComputedStyle( document.documentElement ).getPropertyValue( "--supports-has" ); // Get "--supports-has" CSS property
 
 	// Reinitialize tagfilter if content on the page has been updated by another plugin
-	if ( data.source !== componentName ) {
+	if ( data !== undefined && data.source !== componentName ) {
 		if ( wait ) {
 			clearTimeout( wait );
 		}

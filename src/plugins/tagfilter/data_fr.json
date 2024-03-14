@@ -1,7 +1,7 @@
 {
     "events": [
         {
-            "tags": "language__english language__french location__online dayOTW_friday",
+            "tags": "language__english language__french location__online dayOTW_friday 2022-08-05",
             "title": "Demandez tout à PAC",
             "date": "Vendredi 5 août, 2022",
             "time": "12h à 13h",
@@ -9,7 +9,7 @@
             "language": "Français et anglais"
         },
         {
-            "tags": "language__english location__vancouver dayOTW_wednesday",
+            "tags": "language__english location__vancouver dayOTW_wednesday 2022-08-10",
             "title": "Misez sur des opportunités",
             "date": "Mercredi 10 août, 2022",
             "time": "14h à 15h30",
@@ -17,7 +17,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__english location__ottawa dayOTW_thursday",
+            "tags": "language__english location__ottawa dayOTW_thursday 2022-08-11",
             "title": "Faire affaire avec le gouvernement du Canada (Webinaire)",
             "date": "Jeudi 11 août, 2022",
             "time": "12h à 14h",
@@ -25,7 +25,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__english location__online dayOTW_friday",
+            "tags": "language__english location__online dayOTW_friday 2022-08-12",
             "title": "Demandez tout à PAC",
             "date": "Vendredi 12 août, 2022",
             "time": "12h à 13h",
@@ -33,7 +33,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__english location__ottawa dayOTW_thursday",
+            "tags": "language__english location__ottawa dayOTW_thursday 2022-08-18",
             "title": "Misez sur des opportunités (Webinaire)",
             "date": "Jeudi 18 août, 2022",
             "time": "12h à 14h",
@@ -41,7 +41,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__english location__online dayOTW_friday",
+            "tags": "language__english location__online dayOTW_friday 2022-08-19",
             "title": "Demandez tout à PAC",
             "date": "Vendredi 19 août, 2022",
             "time": "12h à 13h",
@@ -49,7 +49,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__french location__ottawa dayOTW_thursday",
+            "tags": "language__french location__ottawa dayOTW_thursday 2022-08-25",
             "title": "Atelier pour s'inscrire au système d'information sur l'inscription des fournisseurs (SRI) et au Répertoire des Autochtones (IBD) pour les entreprises dirigées par des Autochtones",
             "date": "Jeudi 25 août, 2022",
             "time": "9h30 à 11h",
@@ -57,7 +57,7 @@
             "language": "Français"
         },
         {
-            "tags": "language__english location__ottawa location__montreal dayOTW_thursday",
+            "tags": "language__english location__ottawa location__montreal dayOTW_thursday 2022-08-25",
             "title": "Atelier pour s'inscrire au système d'information sur l'inscription des fournisseurs (SRI) et au Répertoire des Autochtones (IBD) pour les entreprises dirigées par des Autochtones",
             "date": "Jeudi 25 août, 2022",
             "time": "13h à 14h30",
@@ -65,7 +65,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__french location__montreal dayOTW_thursday",
+            "tags": "language__french location__montreal dayOTW_thursday 2022-08-25",
             "title": "Faire affaire avec le gouvernement du Canada",
             "date": "Jeudi 25 août, 2022",
             "time": "13h30 à 15h",
@@ -73,7 +73,7 @@
             "language": "Français"
         },
         {
-            "tags": "language__english location__vancouver dayOTW_thursday",
+            "tags": "language__english location__vancouver dayOTW_thursday 2022-08-25",
             "title": "Faire affaire avec le gouvernement du Canada",
             "date": "Jeudi 25 août, 2022",
             "time": "14h à 15h30",
@@ -81,7 +81,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__english location__online dayOTW_friday",
+            "tags": "language__english location__online dayOTW_friday 2022-08-26",
             "title": "Demandez tout à PAC",
             "date": "Vendredi 26 août, 2022",
             "time": "12h à 13h30",
@@ -89,7 +89,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__english location__toronto dayOTW_tuesday",
+            "tags": "language__english location__toronto dayOTW_tuesday 2022-08-30",
             "title": "Démystifier les marchés publics fédéraux et aperçu de l'innovation pour la défense, l'excellence et la rité (IDEaS)",
             "date": "Mardi 30 août, 2022",
             "time": "10h à 11h",
@@ -97,7 +97,7 @@
             "language": "Anglais"
         },
         {
-            "tags": "language__french location__montreal dayOTW_tuesday",
+            "tags": "language__french location__montreal dayOTW_tuesday 2022-08-30",
             "title": "Inscrivez-vous en tant que fournisseur et trouvez des opportunités sur Achatsetventes.gc.ca",
             "date": "Mardi 30 août, 2022",
             "time": "13h30 à 15h",
@@ -105,7 +105,7 @@
             "language": "Français"
         },
         {
-            "tags": "language__english location__toronto dayOTW_wednesday",
+            "tags": "language__english location__toronto dayOTW_wednesday 2022-08-31",
             "title": "Café virtuel sans rendez-vous sur l'approvisionnement fédéral",
             "date": "Mercredi 31 août, 2022",
             "time": "15h à 16h",
